@@ -1,0 +1,33 @@
+
+.home{
+    background-color: beige;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.home_pic{
+    width: 70%;
+    height: 425px;
+    z-index: -1;
+    float: left; 
+    margin-bottom: -150px;
+}
+
+.home_product{
+    margin-top: 5px;
+    display: flex; 
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.row_second{
+    margin-top: 50px;
+}
+.row_third{
+    width: 40;
+}
+.FeaturedBooks > h3{
+    margin-top: -15px;
+    color: #747171;
+}
