@@ -10,21 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="">
+    <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BoardUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BoardUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Featured.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Featured.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth-header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +48,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -90,6 +81,7 @@
         <script value="start" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -104,8 +96,23 @@
       <updated>1601394967928</updated>
       <workItem from="1601394969283" duration="813000" />
       <workItem from="1601525461328" duration="5503000" />
-      <workItem from="1606165338639" duration="477000" />
+      <workItem from="1606165338639" duration="1827000" />
     </task>
+    <task id="LOCAL-00001" summary="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
+      <created>1606166212255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606166212255</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" d">
+      <created>1606167017096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606167017096</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,26 +130,43 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR." />
+    <MESSAGE value=" d" />
+    <option name="LAST_COMMIT_MESSAGE" value=" d" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1503" height="382" key="GridCell.Tab.0.bottom" timestamp="1601395817366">
-      <screen x="0" y="23" width="3440" height="1340" />
+    <state x="5" y="88" key="CommitChangelistDialog2" timestamp="1606167016804">
+      <screen x="0" y="25" width="1920" height="1002" />
+    </state>
+    <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167016804" />
+    <state width="449" height="876" key="GridCell.Tab.0.bottom" timestamp="1606166892323">
+      <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state width="1503" height="382" key="GridCell.Tab.0.bottom/0.23.3440.1340@0.23.3440.1340" timestamp="1601395817366" />
-    <state width="1503" height="382" key="GridCell.Tab.0.center" timestamp="1601395817366">
-      <screen x="0" y="23" width="3440" height="1340" />
+    <state width="449" height="876" key="GridCell.Tab.0.bottom/0.25.1920.1002@0.25.1920.1002" timestamp="1606166892323" />
+    <state width="449" height="876" key="GridCell.Tab.0.center" timestamp="1606166892322">
+      <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state width="1503" height="382" key="GridCell.Tab.0.center/0.23.3440.1340@0.23.3440.1340" timestamp="1601395817366" />
-    <state width="1503" height="382" key="GridCell.Tab.0.left" timestamp="1601395817366">
-      <screen x="0" y="23" width="3440" height="1340" />
+    <state width="449" height="876" key="GridCell.Tab.0.center/0.25.1920.1002@0.25.1920.1002" timestamp="1606166892322" />
+    <state width="449" height="876" key="GridCell.Tab.0.left" timestamp="1606166892322">
+      <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state width="1503" height="382" key="GridCell.Tab.0.left/0.23.3440.1340@0.23.3440.1340" timestamp="1601395817366" />
-    <state width="1503" height="382" key="GridCell.Tab.0.right" timestamp="1601395817366">
-      <screen x="0" y="23" width="3440" height="1340" />
+    <state width="449" height="876" key="GridCell.Tab.0.left/0.25.1920.1002@0.25.1920.1002" timestamp="1606166892322" />
+    <state width="449" height="876" key="GridCell.Tab.0.right" timestamp="1606166892323">
+      <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state width="1503" height="382" key="GridCell.Tab.0.right/0.23.3440.1340@0.23.3440.1340" timestamp="1601395817366" />
+    <state width="449" height="876" key="GridCell.Tab.0.right/0.25.1920.1002@0.25.1920.1002" timestamp="1606166892323" />
     <state x="0" y="162" key="SettingsEditor" timestamp="1606165527165">
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state x="0" y="162" key="SettingsEditor/0.25.1920.1002@0.25.1920.1002" timestamp="1606165527165" />
+    <state x="20" y="263" key="Vcs.Push.Dialog.v2" timestamp="1606167022933">
+      <screen x="0" y="25" width="1920" height="1002" />
+    </state>
+    <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167022933" />
   </component>
 </project>
