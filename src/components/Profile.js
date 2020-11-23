@@ -3,28 +3,25 @@ import AuthService from "../services/auth.service";
 
 const Profile = () => {
   const currentUser = AuthService.getCurrentUser();
-
+  console.log('currentUser.body', currentUser.body)
   return (
     <div className="container">
       <header className="jumbotron">
         <h3>
-          <strong>{currentUser.username}</strong> Profile
+          <strong>{currentUser.body.username}</strong> Profile
         </h3>
       </header>
       <p>
-        <strong>Token:</strong> {currentUser.idToken.substring(0, 20)} ...{" "}
-        {currentUser.idToken.substr(currentUser.idToken.length - 20)}
+        <strong>Name:</strong> {currentUser.body.firstName} {currentUser.body.lastName} 
       </p>
       <p>
-        <strong>Id:</strong> {currentUser.id}
+        <strong>Email:</strong> {currentUser.body.email} 
       </p>
-      <p>
-        <strong>Email:</strong> {currentUser.email}
-      </p>
+      
       <strong>Authorities:</strong>
       <ul>
-        {currentUser.roles &&
-          currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
+        {currentUser.body.roles &&
+          currentUser.body.roles.map((role, index) => <li key={index}>{role}</li>)}
       </ul>
     </div>
   );

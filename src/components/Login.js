@@ -1,8 +1,7 @@
- import React, { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
 import AuthService from "../services/auth.service";
 
 const required = (value) => {
@@ -43,6 +42,7 @@ const Login = (props) => {
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
+      
       AuthService.login(username, password).then(
         () => {
           props.history.push("/home");
@@ -66,15 +66,12 @@ const Login = (props) => {
   };
 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
+    <div className="login">
+      <div className="login_container">
         <img
          className="login_logo"
-         src="./images/EBSO.png"
+         src="https://i.ibb.co/Ld0g4D3/output-onlinepngtools.png"
          alt=""
-          // src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          // alt="profile-img"
-          // className="profile-img-card"
         />
 
         <Form onSubmit={handleLogin} ref={form}>

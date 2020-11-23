@@ -2,35 +2,68 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/v1/auth/";
 
-const register = (username, email, password) => {
+const register = (username, password, email, firstName, lastName, middleName,
+                  addressLine1, addressLine2, city, state, zipCode, country,
+                  phoneNumber) => {
   return axios.post(API_URL + "signup", {
     username,
-    email,
     password,
+    email,
+    name:{
+      firstName,
+      lastName,
+      middleName,
+    },
+    address:{
+      addressLine1,
+      addressLine2,
+      city,
+      state,
+      zipCode,
+      country,
+    },
+    phoneNumber,
+    "status": "PENDING",
+    "lastLoginTimeStamp": null,
+    "roles": [
+      {
+        "name": "ROLE_USER"
+      }
+    ]
+  });
+};
+
+const confirmRegistration = (username, password, verificationCode) => {
+  return axios.post(API_URL + "confirmregistration", {
+    verificationCode,
+    username,
+    password
   });
 };
 
 const login = (username, password) => {
   return axios
-    .post(API_URL + "signin", {
-      username,
-      password,
-    })
-    .then((response) => {
-      if (response.data.idToken) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
-
-      return response.data;
-    });
+      .post(API_URL + "signin", {
+        username,
+        password,
+      })
+      .then((response) => {
+        if (response.data.header) {
+          console.log('ebsoResponse is not null!!!!!!!!!!!')
+          localStorage.setItem("ebsoResponse", JSON.stringify(response.data));
+        }
+        return response.data;
+      });
 };
 
 const logout = () => {
-  localStorage.removeItem("user");
+  console.log('Logging out');
+  localStorage.removeItem("ebsoResponse");
 };
 
 const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem("user"));
+  console.log('localStorage.getItem("ebsoResponse"):',  localStorage.getItem("ebsoResponse"));
+  return JSON.parse(localStorage.getItem("ebsoResponse"));
 };
 
 export default {
@@ -38,4 +71,5 @@ export default {
   login,
   logout,
   getCurrentUser,
+  confirmRegistration
 };

@@ -3,15 +3,21 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+
 import AuthService from "./services/auth.service";
+
 
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ConfirmRegistration from "./components/ConfirmRegistration";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
+import Products from "./components/Products";
+import Categories from "./components/Categories";
+
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -23,8 +29,9 @@ const App = () => {
 
     if (user) {
       setCurrentUser(user);
-      setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
+      console.log('user.body', user.body)
+      setShowModeratorBoard(user.body.roles.includes("ROLE_MODERATOR"));
+      setShowAdminBoard(user.body.roles.includes("ROLE_ADMIN"));
     }
   }, []);
 
@@ -45,6 +52,19 @@ const App = () => {
             </Link>
           </li>
 
+          <li className="nav-item">
+            <Link to={"/categories"} className="nav-link">
+              Categories
+            </Link>
+          </li> 
+
+          <li className="nav-item">
+            <Link to={"/products"} className="nav-link">
+              Products
+            </Link>
+          
+          </li>
+
           {showModeratorBoard && (
             <li className="nav-item">
               <Link to={"/mod"} className="nav-link">
@@ -63,8 +83,8 @@ const App = () => {
 
           {currentUser && (
             <li className="nav-item">
-              <Link to={"/user"} className="nav-link">
-                User
+              <Link to={"/users"} className="nav-link">
+               
               </Link>
             </li>
           )}
@@ -74,7 +94,7 @@ const App = () => {
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to={"/profile"} className="nav-link">
-                {currentUser.username}
+                Profile: {currentUser.body.username}
               </Link>
             </li>
             <li className="nav-item">
@@ -95,6 +115,12 @@ const App = () => {
               <Link to={"/register"} className="nav-link">
                 Sign Up
               </Link>
+
+              <li className="nav-item">
+              <Link to={"/confirmregistration"} className="nav-link">
+                Confirm Registration
+              </Link>
+            </li>
             </li>
           </div>
         )}
@@ -105,10 +131,13 @@ const App = () => {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/confirmregistration" component={ConfirmRegistration} />
           <Route exact path="/profile" component={Profile} />
-          <Route path="/user" component={BoardUser} />
+          <Route path="/users" component={BoardUser} />
           <Route path="/mod" component={BoardModerator} />
           <Route path="/admin" component={BoardAdmin} />
+          <Route path="/products" component={Products} />
+          <Route path="/categories" component={Categories} />
         </Switch>
       </div>
     </div>
