@@ -22,29 +22,63 @@ class Products extends Component{
     }
 
     fetchProducts(page){
-        axios.get(`http://localhost:8080/api/v1/products?page=${page}&size=10`)
-        .then(response => {
-            const totalPages = response.data.body.totalPages;
-            const itemsPerPage = response.data.body.size;
-            const totalItems = response.data.body.totalElements;
-        
-
-            this.setState({totalPages: totalPages});
-            this.setState({itemsPerPage: itemsPerPage});
-            this.setState({totalItems: totalItems});
-            
-
-            const products = response.data.body.content; // products
+        if(localStorage.getItem("category")){
+            axios.get(`http://localhost:8080/api/v1/products?categoryId=${localStorage.getItem("category")}&page=${page}&size=10`)
+                .then(response => {
+                    const totalPages = response.data.body.totalPages;
+                    const itemsPerPage = response.data.body.size;
+                    const totalItems = response.data.body.totalElements;
 
 
-            this.setState({products: products});
-            console.log('response.data: ',  response.data);
-            console.log('products = response.data.body.content: ',  products);
-            console.log('response.data.body: ',  response.data.body);
-            console.log('activePage = ', this.state.activePage);
-            console.log('max number of items that can be on a page: ', this.state.itemsPerPage);
+                    this.setState({totalPages: totalPages});
+                    this.setState({itemsPerPage: itemsPerPage});
+                    this.setState({totalItems: totalItems});
 
-        });
+
+                    const products = response.data.body.content; // products
+
+
+                    this.setState({products: products});
+                    console.log('localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
+                    console.log('response.data.body.content[0].category.id', products[0].category.id)
+                    console.log('response.data: ', response.data);
+                    console.log('products = response.data.body.content: ', products);
+                    console.log('response.data.body: ', response.data.body);
+                    console.log('activePage = ', this.state.activePage);
+                    console.log('max number of items that can be on a page: ', this.state.itemsPerPage);
+
+                    // localStorage.removeItem("category")
+                    // console.log('Removed localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
+
+                });
+        } else {
+            axios.get(`http://localhost:8080/api/v1/products?page=${page}&size=10`)
+                .then(response => {
+                    const totalPages = response.data.body.totalPages;
+                    const itemsPerPage = response.data.body.size;
+                    const totalItems = response.data.body.totalElements;
+
+
+                    this.setState({totalPages: totalPages});
+                    this.setState({itemsPerPage: itemsPerPage});
+                    this.setState({totalItems: totalItems});
+
+
+                    const products = response.data.body.content; // products
+
+
+                    this.setState({products: products});
+                    console.log('localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
+                    console.log('response.data.body.content[0].category.id', products[0].category.id)
+                    console.log('response.data: ', response.data);
+                    console.log('products = response.data.body.content: ', products);
+                    console.log('response.data.body: ', response.data.body);
+                    console.log('activePage = ', this.state.activePage);
+                    console.log('max number of items that can be on a page: ', this.state.itemsPerPage);
+                    // localStorage.removeItem("category")
+                    // console.log('Removed localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
+                });
+        }
     }
 
     componentDidMount(){
@@ -69,7 +103,6 @@ class Products extends Component{
                             <p className="product_price">${product.price}</p>
                             <p>In stock: {product.stockQuantity}</p>
                             <button className="button"> Add to cart</button>
-                            
                         </div>
                     </li>
                     )
@@ -77,6 +110,7 @@ class Products extends Component{
                
 
                 <div>
+
                 <Pagination
                     activePage={this.state.activePage}
                     itemsCountPerPage={this.state.itemsPerPage}
@@ -91,8 +125,6 @@ class Products extends Component{
             </div>
             
         )
-
-
     }
 }
 export default Products;

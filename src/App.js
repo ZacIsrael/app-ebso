@@ -59,7 +59,7 @@ const App = () => {
           </li> 
 
           <li className="nav-item">
-            <Link to={"/products"} className="nav-link">
+            <Link to={"/products"} onClick={(e) => localStorage.removeItem("category")} className="nav-link">
               Products
             </Link>
           
@@ -116,11 +116,11 @@ const App = () => {
                 Sign Up
               </Link>
 
-              <li className="nav-item">
-              <Link to={"/confirmregistration"} className="nav-link">
-                Confirm Registration
-              </Link>
-            </li>
+            {/*  <li className="nav-item">*/}
+            {/*  <Link to={"/confirmregistration"} className="nav-link">*/}
+            {/*    Confirm Registration*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             </li>
           </div>
         )}

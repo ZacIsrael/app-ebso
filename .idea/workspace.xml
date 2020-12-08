@@ -10,9 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
+    <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +100,18 @@
       <updated>1601394967928</updated>
       <workItem from="1601394969283" duration="813000" />
       <workItem from="1601525461328" duration="5503000" />
-      <workItem from="1606165338639" duration="1827000" />
+      <workItem from="1606165338639" duration="2305000" />
+      <workItem from="1606188001396" duration="696000" />
+      <workItem from="1606611991636" duration="650000" />
+      <workItem from="1606692470205" duration="31000" />
+      <workItem from="1607220790939" duration="3499000" />
+      <workItem from="1607278710441" duration="5576000" />
+      <workItem from="1607310915711" duration="641000" />
+      <workItem from="1607361243198" duration="1308000" />
+      <workItem from="1607362997403" duration="956000" />
+      <workItem from="1607365281922" duration="592000" />
+      <workItem from="1607393302861" duration="14577000" />
+      <workItem from="1607448570042" duration="4083000" />
     </task>
     <task id="LOCAL-00001" summary="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
       <created>1606166212255</created>
@@ -112,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606167017096</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added files">
+      <created>1606167296636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606167296636</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,13 +155,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR." />
     <MESSAGE value=" d" />
-    <option name="LAST_COMMIT_MESSAGE" value=" d" />
+    <MESSAGE value="Added files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="88" key="CommitChangelistDialog2" timestamp="1606167016804">
-      <screen x="0" y="25" width="1920" height="1002" />
+    <state x="5" y="88" key="CommitChangelistDialog2" timestamp="1606167296329">
+      <screen x="0" y="25" width="1920" height="1003" />
     </state>
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167016804" />
+    <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167296329" />
     <state width="449" height="876" key="GridCell.Tab.0.bottom" timestamp="1606166892323">
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
@@ -164,9 +188,20 @@
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state x="0" y="162" key="SettingsEditor/0.25.1920.1002@0.25.1920.1002" timestamp="1606165527165" />
-    <state x="20" y="263" key="Vcs.Push.Dialog.v2" timestamp="1606167022933">
-      <screen x="0" y="25" width="1920" height="1002" />
+    <state x="20" y="263" key="Vcs.Push.Dialog.v2" timestamp="1606167299946">
+      <screen x="0" y="25" width="1920" height="1003" />
     </state>
     <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167022933" />
+    <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167299946" />
+    <state x="456" y="90" width="830" height="999" key="dock-window-1" timestamp="1607402717732">
+      <screen x="0" y="25" width="1920" height="1002" />
+    </state>
+    <state x="945" y="25" width="830" height="999" key="dock-window-1/0.25.1920.1000@0.25.1920.1000" timestamp="1607399024161" />
+    <state x="1037" y="238" width="830" height="999" key="dock-window-1/0.25.1920.1001@0.25.1920.1001" timestamp="1607395752927" />
+    <state x="456" y="90" width="830" height="999" key="dock-window-1/0.25.1920.1002@0.25.1920.1002" timestamp="1607402717732" />
+    <state x="110" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1607397656171">
+      <screen x="0" y="25" width="1920" height="1000" />
+    </state>
+    <state x="110" y="244" width="670" height="676" key="search.everywhere.popup/0.25.1920.1000@0.25.1920.1000" timestamp="1607397656171" />
   </component>
 </project>
