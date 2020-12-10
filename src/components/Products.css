@@ -1,4 +1,20 @@
+
 .photo {
     height: 100px;
-    width: 150px; 
+    width: 150px;
 }
+.product_list{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.product-pages{
+    display: flex;
+    margin-left: 4%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+

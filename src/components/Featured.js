@@ -1,56 +1,46 @@
-import React from 'react';
-import "./Featured.css";
-
-
-// export default function Featured(props) {
-
-//     const displayProducts = (props) => {
-//         const {menu, products} = props;
-//         if(products.length > 0){
-//             return(
-//                 products.map((product, index) => {
-//                     console.log(product)
-//                     return(
-//                         <div className="featProduct">
-//                             <p className="product_title">{product.displayName} </p>
-//                             <p className= "product_price">{product.price}</p>
-//                         </div>
-//                     )
-//                 })
-//             )
-//         } else{
-//             return (<h3>No products</h3>)
-//         }
-//     }
-
-
-
+// import React from 'react';
+// import "./Featured.css";
+// import {useStateValue} from "./StateProvider";
+//
+// function Featured({id, title, image, price}) {
+//     const [{}, dispatch ] = useStateValue();
+//
+//     const addToBasket = () => {
+//         dispatch({
+//             type:"ADD_TO_BASKET",
+//             item: {
+//                 id: id,
+//                 title: title,
+//                 image: image,
+//                 price: price,
+//
+//             },
+//         });
+//
+//
+//     };
+//     return (
+//         <div className="featProduct">
+//
+//
+//             <img src={image} alt="" />
+//
+//
+//
+//             <p className="product_title">
+//                 {title}
+//             </p>
+//             <p className= "product_price">
+//                 <small>$</small>
+//                 <strong>{price}</strong>
+//             </p>
+//
+//             <button onClick= {addToBasket}> Add to cart </button>
+//
+//
+//         </div>
+//
+//     );
 // }
-
-
-
-function Featured() {
-  
-  //const products =  ProductService.getProducts()[0];
- 
-    return (
-        <div className="featProduct">
-            <p className="product_title">
-               
-            </p>
-            <p className= "product_price">
-                <small>$</small>
-              
-            </p>
-           
-    
-        {}
-        <button className="button"> Add to cart</button>
-
-        </div>
-
-    );
-}
-
-export default Featured;
-
+//
+// export default Featured;

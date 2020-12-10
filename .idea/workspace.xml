@@ -11,12 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StateProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CheckoutProduct.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CheckoutProduct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Subtotal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Subtotal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Featured.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Featured.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Featured.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Featured.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +71,11 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
@@ -112,6 +128,9 @@
       <workItem from="1607365281922" duration="592000" />
       <workItem from="1607393302861" duration="14577000" />
       <workItem from="1607448570042" duration="4083000" />
+      <workItem from="1607455715524" duration="908000" />
+      <workItem from="1607501768713" duration="569000" />
+      <workItem from="1607546928044" duration="12214000" />
     </task>
     <task id="LOCAL-00001" summary="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
       <created>1606166212255</created>
@@ -134,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606167296636</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes">
+      <created>1607455754550</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607455754550</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,14 +182,20 @@
     <MESSAGE value="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR." />
     <MESSAGE value=" d" />
     <MESSAGE value="Added files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added files" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="5" y="88" key="CommitChangelistDialog2" timestamp="1606167296329">
-      <screen x="0" y="25" width="1920" height="1003" />
+    <state x="1138" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607559566782">
+      <screen x="0" y="25" width="1920" height="999" />
+    </state>
+    <state x="1138" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.999@0.25.1920.999" timestamp="1607559566782" />
+    <state x="5" y="88" key="CommitChangelistDialog2" timestamp="1607455754194">
+      <screen x="0" y="25" width="1920" height="998" />
     </state>
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167016804" />
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167296329" />
+    <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.998@0.25.1920.998" timestamp="1607455754194" />
     <state width="449" height="876" key="GridCell.Tab.0.bottom" timestamp="1606166892323">
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
@@ -188,17 +220,19 @@
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state x="0" y="162" key="SettingsEditor/0.25.1920.1002@0.25.1920.1002" timestamp="1606165527165" />
-    <state x="20" y="263" key="Vcs.Push.Dialog.v2" timestamp="1606167299946">
-      <screen x="0" y="25" width="1920" height="1003" />
+    <state x="20" y="262" key="Vcs.Push.Dialog.v2" timestamp="1607455758819">
+      <screen x="0" y="25" width="1920" height="998" />
     </state>
     <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167022933" />
     <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167299946" />
-    <state x="456" y="90" width="830" height="999" key="dock-window-1" timestamp="1607402717732">
-      <screen x="0" y="25" width="1920" height="1002" />
+    <state x="20" y="262" key="Vcs.Push.Dialog.v2/0.25.1920.998@0.25.1920.998" timestamp="1607455758819" />
+    <state x="133" y="34" width="856" height="854" key="dock-window-1" timestamp="1607550660790">
+      <screen x="0" y="25" width="1920" height="999" />
     </state>
     <state x="945" y="25" width="830" height="999" key="dock-window-1/0.25.1920.1000@0.25.1920.1000" timestamp="1607399024161" />
     <state x="1037" y="238" width="830" height="999" key="dock-window-1/0.25.1920.1001@0.25.1920.1001" timestamp="1607395752927" />
     <state x="456" y="90" width="830" height="999" key="dock-window-1/0.25.1920.1002@0.25.1920.1002" timestamp="1607402717732" />
+    <state x="133" y="34" width="856" height="854" key="dock-window-1/0.25.1920.999@0.25.1920.999" timestamp="1607550660790" />
     <state x="110" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1607397656171">
       <screen x="0" y="25" width="1920" height="1000" />
     </state>

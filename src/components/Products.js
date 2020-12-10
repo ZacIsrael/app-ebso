@@ -90,44 +90,100 @@ class Products extends Component{
         this.setState({activePage: pageNumber});
         this.fetchProducts(pageNumber-1);
     }
+
     render(){
-        
+
         return(
 
             <div>
-                 {this.state.products.map((product, index) => {
+                {this.state.products.map((product, index) => {
                     return (<li key={index}>
-                        <div className="featProduct">
-                            <img className="photo" src={product.photoUrl} alt={`${product.photoUrl} not loading`} />
-                            <p className="product_title">{product.displayName} </p>
-                            <p className="product_price">${product.price}</p>
-                            <p>In stock: {product.stockQuantity}</p>
-                            <button className="button"> Add to cart</button>
-                        </div>
-                    </li>
+                            <div className="featProduct">
+                                <img className="photo" src={product.photoUrl} alt={`${product.photoUrl} not loading`} />
+                                <p className="product_title">{product.displayName} </p>
+                                <p className="product_price">${product.price}</p>
+                                <p>In stock: {product.stockQuantity}</p>
+                                <button className="button"> Add to cart</button>
+                            </div>
+                        </li>
                     )
+
                 })}
-               
 
                 <div>
 
-                <Pagination
-                    activePage={this.state.activePage}
-                    itemsCountPerPage={this.state.itemsPerPage}
-                    totalItemsCount={this.state.totalItems}
-                    itemClass='page-item'
-                    linkClass='btn btn-light'
-                    onChange={this.onPageChange}
-                    
+                    <Pagination
+                        activePage={this.state.activePage}
+                        itemsCountPerPage={this.state.itemsPerPage}
+                        totalItemsCount={this.state.totalItems}
+                        itemClass='page-item'
+                        linkClass='btn btn-light'
+                        onChange={this.onPageChange}
+
                     />
 
                 </div>
             </div>
-            
+
         )
     }
 }
 export default Products;
+
+//     render(){ // Jennie's version
+//
+//         return(
+//
+//             <div>
+//                 <Header />
+//
+//                 <div className= 'banner'>
+//                     <img
+//                         src="https://i.ibb.co/YbJC1Nd/TECHNOLOGY.png"
+//                         alt=""
+//                     />
+//                 </div>
+//                 <div className="product_list">
+//                     {
+//                         this.state.products.map(
+//                             (product, index) => {
+//                                 return (
+//                                     <ul key={index} id={product.id}>
+//                                         <Featured
+//                                             id={product.id}
+//                                             title={product.displayName}
+//                                             image={product.photoUrl}
+//                                             price={product.price}
+//                                         />
+//                                     </ul>
+//                                 )
+//                             }
+//                         )
+//                     }
+//                 </div>
+//
+//
+//                 <div>
+//                     <div className="product-pages">
+//                         <Pagination
+//                             activePage={this.state.activePage}
+//                             itemsCountPerPage={this.state.itemsPerPage}
+//                             totalItemsCount={this.state.totalItems}
+//                             itemClass='page-item'
+//                             linkClass='btn btn-light'
+//                             onChange={this.onPageChange}
+//
+//                         />
+//                     </div>
+//                 </div>
+//             </div>
+//
+//         )
+//     }
+// }
+// export default Products;
+
+
 
 
 

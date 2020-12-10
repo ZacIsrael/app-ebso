@@ -19,6 +19,7 @@ import Products from "./components/Products";
 import Categories from "./components/Categories";
 
 
+
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
   const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -56,7 +57,7 @@ const App = () => {
             <Link to={"/categories"} className="nav-link">
               Categories
             </Link>
-          </li> 
+          </li>
 
           <li className="nav-item">
             <Link to={"/products"} onClick={(e) => localStorage.removeItem("category")} className="nav-link">
@@ -116,11 +117,6 @@ const App = () => {
                 Sign Up
               </Link>
 
-            {/*  <li className="nav-item">*/}
-            {/*  <Link to={"/confirmregistration"} className="nav-link">*/}
-            {/*    Confirm Registration*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
             </li>
           </div>
         )}
