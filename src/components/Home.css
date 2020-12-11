@@ -1,33 +1,100 @@
 
 .home{
-    background-color: beige;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-   
+    background-color:#e5f5ff;  
 }
-.home_pic{
-    width: 70%;
-    height: 425px;
-    z-index: -1;
-    float: left; 
-    margin-bottom: -150px;
+
+.Top{
+    display: flex;
+    margin-left: 0px;
+    margin-bottom: 200px;
+
 }
 
 .home_product{
-    margin-top: 5px;
-    display: flex; 
-    z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: -15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    
 }
+
 .row_second{
-    margin-top: 50px;
+   margin-top: 40px;
+   padding-left: 30px;
+   padding-right: 20px;
+   
 }
-.row_third{
+.row_second >h2{
+    margin-left: 80px;
+    font-size: 40px;
+    margin-top: -130px;
+    font-weight: bold;
+}
+.row_second >h4{
+    margin-left: 90px;
+    margin-bottom: 20px;
+    color: gray;
+    font-weight: 500;
+}.row_third{
     width: 40;
+  
+    padding-right: 5px;
+    padding-left: 70px;
+    margin-left: -40px;
+    padding-right: 20px;
+    
+}
+.row_third > h4{
+    margin-bottom: 20px;
+   
+}
+.row_third2{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-right: 20px;
+    padding-left: 70px;
+    margin-left: -40px;
 }
 .FeaturedBooks > h3{
+    float: center;
     margin-top: -15px;
     color: #747171;
+}
+ .row_third >h2{
+    margin-left: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    
+    
+   
+ }
+ .row_third >h4{
+    margin-left: 60px;
+    color: #747171;
+    font-weight: 500;
+    
+   
+ }
+.carousel{ 
+    position: flex;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+
+.rec.rec-arrow {
+    border-radius: 15%;
+}
+
+.rec.rec-arrow:hover {
+    border-radius: 100%;
 }

@@ -3,6 +3,10 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
+import { withRouter } from 'react-router'
+import {Link, useHistory } from "react-router-dom";
+import Lock from '@material-ui/icons/LockOpen';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const required = (value) => {
   if (!value) {
@@ -68,16 +72,24 @@ const Login = (props) => {
 
   return (
     <div className="login">
+      <Link to="/">
+                  <img 
+                   className="login_logo"
+                   src="https://i.ibb.co/Ld0g4D3/output-onlinepngtools.png"
+                   alt=""
+                  />
+      </Link>
+
       <div className="login_container">
-        <img
-         className="login_logo"
-         src="https://i.ibb.co/Ld0g4D3/output-onlinepngtools.png"
-         alt=""
-        />
+        <h1>LOGIN</h1>
 
         <Form onSubmit={handleLogin} ref={form}>
-          <div className="form-group">
+          
+          <div className="Login-Form">
+          
+            <MailOutlineIcon />
             <label htmlFor="username">Username</label>
+          
             <Input
               type="text"
               className="form-control"
@@ -88,7 +100,10 @@ const Login = (props) => {
             />
           </div>
 
-          <div className="form-group">
+          <div className="Login-Form">
+            
+            <Lock />
+            
             <label htmlFor="password">Password</label>
             <Input
               type="password"
@@ -98,10 +113,12 @@ const Login = (props) => {
               onChange={onChangePassword}
               validations={[required]}
             />
+
           </div>
 
-          <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
+          <div className="login_button">
+
+            <button className="btn btn-primary btn-block">
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
@@ -110,7 +127,7 @@ const Login = (props) => {
           </div>
 
           {message && (
-            <div className="form-group">
+            <div className="Login-Form">
               <div className="alert alert-danger" role="alert">
                 {message}
               </div>
@@ -118,9 +135,22 @@ const Login = (props) => {
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+
+        <p>
+                    By signing in, you agree to EBSO's Conditions and Agreements. 
+                    Please see our Privacy Notice for information. 
+                </p>
+            <div className="acc_link">
+                <Link to="/register"  className="page_link">
+                <div className="page_option">
+                    <span className="page_optName">Don't have an account? Sign up now</span>
+                </div>
+                
+                 </Link>
       </div>
+    </div>
     </div>
   );
 };
 
-export default Login;
+export default withRouter(Login);

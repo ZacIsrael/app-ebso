@@ -17,7 +17,9 @@ import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 import Products from "./components/Products";
 import Categories from "./components/Categories";
-
+import Header from "./components/Header"
+import Checkout from "./pages/Checkout";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -42,87 +44,7 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <Link to={"/"} className="navbar-brand">
-          EBSO
-        </Link>
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={"/home"} className="nav-link">
-              Home
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link to={"/categories"} className="nav-link">
-              Categories
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link to={"/products"} onClick={(e) => localStorage.removeItem("category")} className="nav-link">
-              Products
-            </Link>
-          
-          </li>
-
-          {showModeratorBoard && (
-            <li className="nav-item">
-              <Link to={"/mod"} className="nav-link">
-                Moderator Board
-              </Link>
-            </li>
-          )}
-
-          {showAdminBoard && (
-            <li className="nav-item">
-              <Link to={"/admin"} className="nav-link">
-                Admin Board
-              </Link>
-            </li>
-          )}
-
-          {currentUser && (
-            <li className="nav-item">
-              <Link to={"/users"} className="nav-link">
-               
-              </Link>
-            </li>
-          )}
-        </div>
-
-        {currentUser ? (
-          <div className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link to={"/profile"} className="nav-link">
-                Profile: {currentUser.body.username}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a href="/login" className="nav-link" onClick={logOut}>
-                LogOut
-              </a>
-            </li>
-          </div>
-        ) : (
-          <div className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link to={"/login"} className="nav-link">
-                Login
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link to={"/register"} className="nav-link">
-                Sign Up
-              </Link>
-
-            </li>
-          </div>
-        )}
-      </nav>
-
-      <div className="container mt-3">
+      <Header/>
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/login" component={Login} />
@@ -134,9 +56,13 @@ const App = () => {
           <Route path="/admin" component={BoardAdmin} />
           <Route path="/products" component={Products} />
           <Route path="/categories" component={Categories} />
+          <Route path="/checkout">
+              <Checkout />
+            </Route>
         </Switch>
+
+        <Footer/>
       </div>
-    </div>
   );
 };
 

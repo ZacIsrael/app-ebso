@@ -1,30 +1,27 @@
-.form{
+.whole{
     background-image: linear-gradient(rgb(197,210,236), rgb(210,236,197));
     
-        height: 100vh;
-        margin-bottom: 50px;
+   
+      
      
         align-items: center;
         
     }   
     
-    .form_container>h1{
+    .Register-Form>h1{
         font-weight: bold;
     }
-    .form_container{
-        margin-top: -5px;
-        background-color: white;
-        padding: 30px;
-        height: 68vh;
-        width: 60vw;
-        border-radius: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    
+    .Register-Form{
+     
     
     }
+    .alert-danger{
+        width: 15vw;
+        margin-left: 30%;
+
+    }
     .form_1{
-        padding-left: 100px;
+        padding-left: 400px;
         display:flex;
         flex-direction: column;
         float: left;
@@ -34,18 +31,18 @@
         
         display:flex;
         flex-direction: column;
-        margin-top: px;
+       
         
     }
-    .form-control{
+    .Register-Control{
         width: 20vw;
         height: 3vh;
         border: 0px solid black; 
-        background-color:#e1e1e1;
+        background-color:#6775a9;
         border-radius: 5px;
         padding: 5px;
     }
-    .form-group>button{
+    .Register-Form>button{
         border: 5px;
         background-color:#C5D2EC;
         border-radius: 6px;
@@ -53,7 +50,8 @@
         padding: 10px;
         font-size: 16px;
         width: 100px;
-       float: left;
        margin-top: 90px;
         
     }
+    
+    

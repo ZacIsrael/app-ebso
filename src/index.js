@@ -4,12 +4,18 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import {StateProvider} from "./components/StateProvider";
+import reducer, { initialState } from "./components/reducer";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+  <StateProvider initialState={initialState} reducer={reducer}>
     <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+  </StateProvider>
+  </BrowserRouter>
+</React.StrictMode>,
+document.getElementById('root')
 );
 
 serviceWorker.unregister();

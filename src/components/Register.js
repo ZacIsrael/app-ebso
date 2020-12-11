@@ -3,6 +3,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
+import {Link, useHistory } from "react-router-dom";
 
 import "./Register.css";
 import AuthService from "../services/auth.service";
@@ -11,7 +12,7 @@ import AuthService from "../services/auth.service";
 const required = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           This field is required!
         </div>
     );
@@ -21,7 +22,7 @@ const required = (value) => {
 const validEmail = (value) => {
   if (!isEmail(value)) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           This is not a valid email.
         </div>
     );
@@ -31,7 +32,7 @@ const validEmail = (value) => {
 const vusername = (value) => {
   if (value.length < 3 || value.length > 20) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           The username must be between 3 and 20 characters.
         </div>
     );
@@ -41,7 +42,7 @@ const vusername = (value) => {
 const vpassword = (value) => {
   if (value.length < 6 || value.length > 40) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           The password must be between 6 and 40 characters.
         </div>
     );
@@ -51,7 +52,7 @@ const vpassword = (value) => {
 const vfirstName = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter your first name
         </div>
     );
@@ -60,7 +61,7 @@ const vfirstName = (value) => {
 const vlastName = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter your last name
         </div>
     );
@@ -70,7 +71,7 @@ const vlastName = (value) => {
 const vaddressLine1 = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter your address
         </div>
     );
@@ -80,7 +81,7 @@ const vaddressLine1 = (value) => {
 const vcity = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter the city that you live in
         </div>
     );
@@ -90,7 +91,7 @@ const vcity = (value) => {
 const vstate= (value) => {
   if (value.length !== 2) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter the state that you live in (2 letter abbreviation)
         </div>
     );
@@ -100,7 +101,7 @@ const vstate= (value) => {
 const vzipCode = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter the zip code of the area in which you reside
         </div>
     );
@@ -110,7 +111,7 @@ const vzipCode = (value) => {
 const vcountry = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter the country of which you reside
         </div>
     );
@@ -120,7 +121,7 @@ const vcountry = (value) => {
 const vphoneNumber = (value) => {
   if (!value) {
     return (
-        <div className="alert alert-danger" role="alert">
+        <div className="alert-danger" role="alert">
           Please enter your phone number 
         </div>
     );
@@ -248,36 +249,44 @@ const Register = (props) => {
   return (
 
 
-      <div className="col-md-12">
-        <div className="card card-container">
-          <img
-              src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-              alt="profile-img"
-              className="profile-img-card"
-          />
+      <div className="whole">
+        
+        
 
           <Form onSubmit={handleRegister} ref={form}>
             {!successful && (
 
               
-                <div>
-                  <div className="form-group">
+                 <div className="register_form">
+
+                            <Link to="/">
+                             <img 
+                                className="login_logo"
+                                src="https://i.ibb.co/Ld0g4D3/output-onlinepngtools.png"
+                                alt=""
+                             />
+                            </Link>
+                   <div className="Register-Container">
+                     <h1>Register for New Account</h1>
+                     <div className="form_1">
+
+
+                     <div className="Register-Form"> 
                     <label htmlFor="username">Username</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="username"
                         value={username}
                         onChange={onChangeUsername}
                         validations={[required, vusername]}
                     />
                   </div>
-
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="firstName">First Name</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="firstName"
                         value={firstName}
                         onChange={onChangeFirstName}
@@ -285,11 +294,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="middleName">Middle Name</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="middleName"
                         value={middleName}
                         onChange={onChangeMiddleName}
@@ -297,11 +306,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="lastName">Last Name</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="firstName"
                         value={lastName}
                         onChange={onChangeLastName}
@@ -309,11 +318,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="email">Email</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="email"
                         value={email}
                         onChange={onChangeEmail}
@@ -321,23 +330,24 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="password">Password</label>
                     <Input
                         type="password"
-                        className="form-control"
+                        className="Register-Control"
                         name="password"
                         value={password}
                         onChange={onChangePassword}
                         validations={[required, vpassword]}
                     />
                   </div>
-
-                  <div className="form-group">
+                  </div>
+                  <div className="form_2">
+                  <div className="Register-Form">
                     <label htmlFor="addressLine1">Address Line 1</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="addressLine1"
                         value={addressLine1}
                         onChange={onChangeAddressLine1}
@@ -345,11 +355,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="addressLine2">Address Line 2</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="addressLine2"
                         value={addressLine2}
                         onChange={onChangeAddressLine2}
@@ -357,11 +367,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="city">City</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="city"
                         value={city}
                         onChange={onChangeCity}
@@ -369,11 +379,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="state">State</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="state"
                         value={state}
                         onChange={onChangeState}
@@ -381,11 +391,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="zipCode">Zip Code</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="zipCode"
                         value={zipCode}
                         onChange={onChangeZipCode}
@@ -393,11 +403,11 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="country">Country</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="country"
                         value={country}
                         onChange={onChangeCountry}
@@ -405,41 +415,43 @@ const Register = (props) => {
                     />
                   </div>
 
-                  <div className="form-group">
+                  <div className="Register-Form">
                     <label htmlFor="phoneNumber">Phone Number</label>
                     <Input
                         type="text"
-                        className="form-control"
+                        className="Register-Control"
                         name="phoneNumber"
                         value={phoneNumber}
                         onChange={onChangePhoneNumber}
                         validations={[required, vphoneNumber]}
                     />
                   </div>
-
-                  <div className="form-group">
+                  
+                  </div>
+                  <div className="Register-Form">
                     <button className="btn btn-primary btn-block">Sign Up</button>
                   </div>
+                </div>
                 </div>
             )}
 
             {message && (
-                <div className="form-group">
+                <div className="Register-Form">
                   <div
                       className={
-                        successful ? "alert alert-success" : "alert alert-danger"
+                        successful ? "alert alert-success" : "alert-danger"
                       }
                       role="alert"
                   >
                     {message}
-                    <a href="http://ebso-website.s3-website.us-east-2.amazonaws.com/confirmregistration">Click here to confirm your account</a>
                   </div>
                 </div>
             )}
+
             <CheckButton style={{ display: "none" }} ref={checkBtn} />
           </Form>
         </div>
-      </div>
+      
   );
 };
 

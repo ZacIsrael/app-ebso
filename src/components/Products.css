@@ -1,19 +1,24 @@
 
-.photo {
+.banner{
+    margin-left: 7%;
+}
+.Featured > photo {
     height: 100px;
     width: 150px;
 }
 .product_list{
-    margin-top: 20px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
+
+
+
+    
 }
 .product-pages{
-    display: flex;
-    margin-left: 4%;
-    margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-left: 41%;
 
 }
 

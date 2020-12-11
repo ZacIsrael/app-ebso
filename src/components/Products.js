@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {Component} from 'react';
 import Pagination from "react-js-pagination";
 import "./Products.css";
+import Featured from "./Featured";
 
 
 class Products extends Component{
@@ -23,7 +24,7 @@ class Products extends Component{
 
     fetchProducts(page){
         if(localStorage.getItem("category")){
-            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?categoryId=${localStorage.getItem("category")}&page=${page}&size=10`)
+            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?categoryId=${localStorage.getItem("category")}&page=${page}&size=9`)
                 .then(response => {
                     const totalPages = response.data.body.totalPages;
                     const itemsPerPage = response.data.body.size;
@@ -39,20 +40,14 @@ class Products extends Component{
 
 
                     this.setState({products: products});
-                    console.log('localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
-                    console.log('response.data.body.content[0].category.id', products[0].category.id)
-                    console.log('response.data: ', response.data);
-                    console.log('products = response.data.body.content: ', products);
-                    console.log('response.data.body: ', response.data.body);
-                    console.log('activePage = ', this.state.activePage);
-                    console.log('max number of items that can be on a page: ', this.state.itemsPerPage);
+               
 
                     // localStorage.removeItem("category")
                     // console.log('Removed localStorage.getItem("currCategory"): ',localStorage.getItem("category"))
 
                 });
         } else {
-            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?page=${page}&size=10`)
+            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?page=${page}&size=9`)
                 .then(response => {
                     const totalPages = response.data.body.totalPages;
                     const itemsPerPage = response.data.body.size;
@@ -94,23 +89,33 @@ class Products extends Component{
     render(){
 
         return(
-
             <div>
+                 <div className= 'banner'>
+                    <img   
+                            src="https://i.ibb.co/YcjFb9s/TECHNOLOGY.png"
+                            alt=""
+                    />
+                </div>
+            <div className="product_list">
                 {this.state.products.map((product, index) => {
-                    return (<li key={index}>
-                            <div className="featProduct">
-                                <img className="photo" src={product.photoUrl} alt={`${product.photoUrl} not loading`} />
-                                <p className="product_title">{product.displayName} </p>
-                                <p className="product_price">${product.price}</p>
-                                <p>In stock: {product.stockQuantity}</p>
-                                <button className="button"> Add to cart</button>
-                            </div>
-                        </li>
+                    return (<ul key={index}>
+                           
+                            <Featured 
+                                            title={product.displayName}
+                                            image={product.photoUrl}
+                                            price={product.price}
+                                            stock={product.stockQuantity}
+                                        />
+                                
+                              
+                        
+                        
+                        </ul>
                     )
 
                 })}
-
-                <div>
+                </div>
+                <div className="product-pages">
 
                     <Pagination
                         activePage={this.state.activePage}
@@ -124,7 +129,6 @@ class Products extends Component{
 
                 </div>
             </div>
-
         )
     }
 }

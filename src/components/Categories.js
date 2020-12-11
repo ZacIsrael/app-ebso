@@ -23,8 +23,6 @@ class Categories extends Component {
 
     getCategories(){
         return axios.get('http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/categories/withproducts')
-
-        // return axios.get('http://localhost:8080/api/v1/categories/withproducts')
     };
 
     render() {
@@ -35,7 +33,7 @@ class Categories extends Component {
                 {this.state.categories.map((category, index) => {
                         return (<li key={index}>
                             <div className="featProduct">
-                                    <a href="http://ebso-website.s3-website.us-east-2.amazonaws.com/products" onClick={() => localStorage.setItem("category", category.id)}>
+                                    <a href="http://localhost:3000/products" onClick={() => localStorage.setItem("category", category.id)}>
                                    {category.displayName}</a>
 
                             </div>
