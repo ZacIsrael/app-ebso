@@ -12,10 +12,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Featured.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Featured.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Checkout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Checkout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CheckoutProduct.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CheckoutProduct.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Subtotal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Subtotal.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +34,11 @@
     <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="JDTerror-patch-2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="9075bdb6-ad88-4309-928a-06aa5ee659f5" />
@@ -46,6 +59,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -239,6 +253,10 @@
     <state x="1037" y="238" width="830" height="999" key="dock-window-1/0.25.1920.1001@0.25.1920.1001" timestamp="1607395752927" />
     <state x="456" y="90" width="830" height="999" key="dock-window-1/0.25.1920.1002@0.25.1920.1002" timestamp="1607402717732" />
     <state x="133" y="34" width="856" height="854" key="dock-window-1/0.25.1920.999@0.25.1920.999" timestamp="1607550660790" />
+    <state x="2554" y="278" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607663646643">
+      <screen x="1680" y="25" width="1920" height="1055" />
+    </state>
+    <state x="2554" y="278" key="git4idea.branch.GitSmartOperationDialog/0.25.1680.975/1680.25.1920.1055@1680.25.1920.1055" timestamp="1607663646643" />
     <state x="110" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1607397656171">
       <screen x="0" y="25" width="1920" height="1000" />
     </state>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// const API_URL = "http://localhost:8080/api/v1/auth/";
+// const API_URL = "http://localhost:5000/api/v1/auth/";
 const API_URL = "http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/auth/";
 
 const register = (username, password, email, firstName, lastName, middleName,
