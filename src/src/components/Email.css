@@ -1,0 +1,15 @@
+.contact-form > label{
+    display: block;
+    margin-top: 3px;
+}
+.contact-form > textarea{
+  width: 300px;
+}
+.contact-form > input{
+    width: 300px;
+}
+.input_button{
+    margin-top: 30px;
+    
+
+}
