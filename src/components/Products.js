@@ -23,7 +23,7 @@ class Products extends Component{
 
     fetchProducts(page){
         if(localStorage.getItem("category")){
-            axios.get(`http://localhost:8080/api/v1/products?categoryId=${localStorage.getItem("category")}&page=${page}&size=10`)
+            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?categoryId=${localStorage.getItem("category")}&page=${page}&size=10`)
                 .then(response => {
                     const totalPages = response.data.body.totalPages;
                     const itemsPerPage = response.data.body.size;
@@ -52,7 +52,7 @@ class Products extends Component{
 
                 });
         } else {
-            axios.get(`http://localhost:8080/api/v1/products?page=${page}&size=10`)
+            axios.get(`http://ebso-env-1.eba-skn6z3ga.us-east-2.elasticbeanstalk.com/api/v1/products?page=${page}&size=10`)
                 .then(response => {
                     const totalPages = response.data.body.totalPages;
                     const itemsPerPage = response.data.body.size;

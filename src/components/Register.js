@@ -432,7 +432,7 @@ const Register = (props) => {
                       role="alert"
                   >
                     {message}
-                    <a href="http://localhost:3000/confirmregistration">Click here to confirm your account</a>
+                    <a href="http://ebso-website.s3-website.us-east-2.amazonaws.com/confirmregistration">Click here to confirm your account</a>
                   </div>
                 </div>
             )}

@@ -12,6 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cd4c440d-0a04-443c-96be-b28f41aa038a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +66,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,6 +119,8 @@
       <workItem from="1607455715524" duration="908000" />
       <workItem from="1607501768713" duration="569000" />
       <workItem from="1607546928044" duration="12858000" />
+      <workItem from="1607565562484" duration="572000" />
+      <workItem from="1607640993192" duration="6500000" />
     </task>
     <task id="LOCAL-00001" summary="Profile.js: Contains the name, username, role, and email of the user logged in&#10;Categories.js: Contains list of categories with products &#10;Product.js: Contains list of products &#10;&#10;PLEASE MODIFY ALL OF THE CSS FILES TO HOW YOU HAD THEM IN THE PREVIOUS PROJECT. THIS ONE LOOKS SIMPLE BECAUSE MY MAIN FOCUS WAS ON INTEGRATION. DO NO NOT FORGET TO ADD THE SEARCH BAR.">
       <created>1606166212255</created>
@@ -149,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607562943649</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changes">
+      <created>1607565582292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607565582292</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,10 +194,10 @@
       <screen x="0" y="25" width="1920" height="999" />
     </state>
     <state x="1138" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.999@0.25.1920.999" timestamp="1607559566782" />
-    <state x="4" y="25" width="831" height="829" key="CommitChangelistDialog2" timestamp="1607562943151">
+    <state x="4" y="25" width="831" height="829" key="CommitChangelistDialog2" timestamp="1607565581964">
       <screen x="0" y="25" width="1440" height="829" />
     </state>
-    <state x="4" y="25" width="831" height="829" key="CommitChangelistDialog2/0.25.1440.829/1440.25.1920.1055@0.25.1440.829" timestamp="1607562943151" />
+    <state x="4" y="25" width="831" height="829" key="CommitChangelistDialog2/0.25.1440.829/1440.25.1920.1055@0.25.1440.829" timestamp="1607565581964" />
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167016804" />
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167296329" />
     <state x="5" y="88" key="CommitChangelistDialog2/0.25.1920.998@0.25.1920.998" timestamp="1607455754194" />
@@ -210,10 +225,10 @@
       <screen x="0" y="25" width="1920" height="1002" />
     </state>
     <state x="0" y="162" key="SettingsEditor/0.25.1920.1002@0.25.1920.1002" timestamp="1606165527165" />
-    <state x="15" y="222" key="Vcs.Push.Dialog.v2" timestamp="1607562946348">
+    <state x="15" y="222" key="Vcs.Push.Dialog.v2" timestamp="1607565585033">
       <screen x="0" y="25" width="1440" height="829" />
     </state>
-    <state x="15" y="222" key="Vcs.Push.Dialog.v2/0.25.1440.829/1440.25.1920.1055@0.25.1440.829" timestamp="1607562946348" />
+    <state x="15" y="222" key="Vcs.Push.Dialog.v2/0.25.1440.829/1440.25.1920.1055@0.25.1440.829" timestamp="1607565585033" />
     <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1002@0.25.1920.1002" timestamp="1606167022933" />
     <state x="20" y="263" key="Vcs.Push.Dialog.v2/0.25.1920.1003@0.25.1920.1003" timestamp="1606167299946" />
     <state x="20" y="262" key="Vcs.Push.Dialog.v2/0.25.1920.998@0.25.1920.998" timestamp="1607455758819" />
